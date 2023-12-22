@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_margin="8dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hienthi"
+        android:textStyle="bold"
+        android:text="CHÀO MỪNG BẠN ĐẾN VỚI ỨNG DỤNG FOOD CỦA CHÚNG TÔI"
+        android:layout_gravity="center_horizontal"/>
+
+        <ImageView
+            android:layout_width="295dp"
+            android:layout_height="295dp"
+            android:textAlignment="textStart"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/demo_menu" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/chooseFoodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn thức ăn"
+        android:backgroundTint="@color/app_theme"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/chooseDrinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/app_theme"
+        android:text="Chọn đồ uống"
+        android:layout_below="@id/chooseFoodButton"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/selectedFoodTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chooseDrinkButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Bạn chọn món ăn: " />
+
+    <TextView
+        android:id="@+id/selectedDrinkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bạn chọn thức uống: "
+        android:layout_below="@id/selectedFoodTextView"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thoát"
+        android:backgroundTint="@color/app_clear"
+        android:layout_below="@id/selectedDrinkTextView"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="exitApp"/>
+</RelativeLayout>
